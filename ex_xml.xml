@@ -1,0 +1,5 @@
+<series>
+	<serie = "Nom de la série">
+		<critique auteur="Auteur" date="Date" note="10">Contenu de la critique</critique>
+	</serie>
+<serie>
