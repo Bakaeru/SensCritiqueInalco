@@ -118,7 +118,28 @@ def main():
                                 # print("-------------------")
         pageN += 1
     with open('corpus.json', 'w') as f:
-        json.dump(corpus, f, sort_keys=True, indent=4)
+        json.dump(corpus, f, sort_keys=True, indent=4, ensure_ascii=False)
+
+    # from xml.etree.ElementTree import Element, SubElement, tostring
+    from lxml import etree
+    # import xml.etree as etree
+
+    corpusXML = etree.Element('corpus')
+    for oeuvre in corpus:
+        oeuvreXML = etree.SubElement(corpusXML,'oeuvre')
+        oeuvreXML.attrib['titre'] = oeuvre
+        for auteur in corpus[oeuvre]:
+            critiqueXML = etree.SubElement(oeuvreXML,'critique')
+            critiqueXML.attrib['auteur'] = auteur
+            critiqueXML.attrib['date'] = str(corpus[oeuvre][auteur]['date'])
+            critiqueXML.attrib['note'] = str(corpus[oeuvre][auteur]['note'])
+            critiqueXML.text = corpus[oeuvre][auteur]['critique']
+    xml = etree.ElementTree(corpusXML)
+    xml.write("./corpus.xml", xml_declaration=True, encoding='UTF-8',
+              pretty_print=True)
+
+
+
 
 
 if __name__ == '__main__':
