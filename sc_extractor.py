@@ -62,23 +62,25 @@ def main():
                                                critiqueURL).content
                         critiqueSoup = BeautifulSoup(requete)
                         # print(critiqueSoup)
-                        utilisateur = "".join(critiqueSoup.find("a", {"class": "rvi-header-author"}).getText().split())
-                        if utilisateur not in corpus[titreOeuvre]:
-                            # print("Récupération de la critique de " + utilisateur)
-                            corpus[titreOeuvre][utilisateur] = dict()
-                            date = critiqueSoup.find("time",
-                                                     {"class": "rvi-review-release"}).attrs['datetime']
-                            corpus[titreOeuvre][utilisateur]['date'] = date
-                            note = int("".join(critiqueSoup.find("span", {"itemprop": "ratingValue"}).getText().split()))
-                            corpus[titreOeuvre][utilisateur]['note'] = note
-                            critiqueContenu = critiqueSoup.find("div",
-                                                                {"class": "rvi-review-content"}).getText()
-                            critiqueContenu = pattern.sub("", critiqueContenu)
-                            corpus[titreOeuvre][utilisateur]['critique'] = critiqueContenu
-                            print(" | ".join([titreOeuvre,utilisateur,date,str(note)]))
-                            # print(corpus[titreOeuvre][utilisateur]['critique'])
-                            # print(critiqueCorps)
-                            # print("-------------------")
+                        headerAuthor = critiqueSoup.find("a", {"class": "rvi-header-author"})
+                        if headerAuthor is not None:
+                            utilisateur = "".join(headerAuthor.getText().split())
+                            if utilisateur not in corpus[titreOeuvre]:
+                                # print("Récupération de la critique de " + utilisateur)
+                                corpus[titreOeuvre][utilisateur] = dict()
+                                date = critiqueSoup.find("time",
+                                                         {"class": "rvi-review-release"}).attrs['datetime']
+                                corpus[titreOeuvre][utilisateur]['date'] = date
+                                note = int("".join(critiqueSoup.find("span", {"itemprop": "ratingValue"}).getText().split()))
+                                corpus[titreOeuvre][utilisateur]['note'] = note
+                                critiqueContenu = critiqueSoup.find("div",
+                                                                    {"class": "rvi-review-content"}).getText()
+                                critiqueContenu = pattern.sub("", critiqueContenu)
+                                corpus[titreOeuvre][utilisateur]['critique'] = critiqueContenu
+                                print(" | ".join([titreOeuvre,utilisateur,date,str(note)]))
+                                # print(corpus[titreOeuvre][utilisateur]['critique'])
+                                # print(critiqueCorps)
+                                # print("-------------------")
                     # print(soup)
                     # print (ficheSoup)
                     topMenu = ficheSoup.find("div",
@@ -99,16 +101,19 @@ def main():
                                                        critiqueURL).content
                                 critiqueSoup = BeautifulSoup(requete)
                                 # print(soup)
-                                utilisateur = "".join(critiqueSoup.find("a", {"class": "rvi-header-author"}).getText().split())
-                                if utilisateur not in corpus[titreOeuvre]:
-                                    corpus[titreOeuvre][utilisateur] = dict()
-                                    corpus[titreOeuvre][utilisateur]['date'] = critiqueSoup.find("time",
-                                                                        {"class": "rvi-review-release"}).attrs['datetime']
-                                    corpus[titreOeuvre][utilisateur]['note'] = int("".join(critiqueSoup.find("span", {"itemprop": "ratingValue"}).getText().split()))
-                                    critiqueContenu = critiqueSoup.find("div",
-                                                                        {"class": "rvi-review-content"}).getText()
-                                    corpus[titreOeuvre][utilisateur]['critique'] = pattern.sub("", critiqueContenu)
-                                    print(" | ".join([titreOeuvre,utilisateur,date,str(note)]))
+
+                                headerAuthor = critiqueSoup.find("a", {"class": "rvi-header-author"})
+                                if headerAuthor is not None:
+                                    utilisateur = "".join(headerAuthor.getText().split())
+                                    if utilisateur not in corpus[titreOeuvre]:
+                                        corpus[titreOeuvre][utilisateur] = dict()
+                                        corpus[titreOeuvre][utilisateur]['date'] = critiqueSoup.find("time",
+                                                                            {"class": "rvi-review-release"}).attrs['datetime']
+                                        corpus[titreOeuvre][utilisateur]['note'] = int("".join(critiqueSoup.find("span", {"itemprop": "ratingValue"}).getText().split()))
+                                        critiqueContenu = critiqueSoup.find("div",
+                                                                            {"class": "rvi-review-content"}).getText()
+                                        corpus[titreOeuvre][utilisateur]['critique'] = pattern.sub("", critiqueContenu)
+                                        print(" | ".join([titreOeuvre,utilisateur,date,str(note)]))
                                 # print(critiqueCorps)
                                 # print("-------------------")
         pageN += 1
