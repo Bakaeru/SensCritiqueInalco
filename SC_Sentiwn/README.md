@@ -9,7 +9,7 @@ Cree un fichier tabulaire avec les colonnes suivantes :
 	- PosScore : 0 <= score positif <= 1
 
 Utilisation : 
->>> python3 frenchswn.py
+> python3 frenchswn.py
 
 Fichier sorti :
 FrenchSentiWordnet.tab
