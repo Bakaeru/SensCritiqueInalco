@@ -95,7 +95,7 @@ def writeFinalFile(finaldic, outfilename):
 	f.write('\t'.join(['FrenchWord','EnglishTerms','NegScore','PosScore'])+'\n')
 	# parcours du dico final
 	for iD in sorted(finaldic):
-		frw = " ".join(finaldic[iD]["word"])
+		frw = "#".join(finaldic[iD]["word"])
 		enSt = finaldic[iD]["SynsetTerms"]
 		negscore=finaldic[iD]['NegScore']
 		poscore=finaldic[iD]['PosScore']
