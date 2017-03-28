@@ -13,6 +13,12 @@ Corpus sur les séries, partitionnement selon les notes, 3 catégories :
 
 "nous" est représentatif du corpus positif.
 
+Les connecteurs et marques d'opposition ou de concessions sont principalement utilisé dnas les critiques positives :
+- mais : 4, 5, 6, 7
+- alors que : 7,8,9,10
+
+Cela confirme l'idée d'un discours plus construit dans les critiques positives
+
 ### Les personnages et acteurs
 
 On parle des personnages si la série est pas mal et des acteurs si la série est bonne.
