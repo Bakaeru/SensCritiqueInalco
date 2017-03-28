@@ -19,4 +19,5 @@ On parle des personnages si la série est pas mal et des acteurs si la série es
 ## Recherche REGAX
 
 1) [frpos="NAM"]+[word=".*"][frpos="ADV" & word=".*ment"][word=".*"]{1,5}
-2)
+2) [word="[A-Z][a-z]+"]+[word="est"][word=".*"]+
+3) [word="[A-Z][a-z]+"]+[word="est"][word=".*"]?[frpos="ADJ"]
