@@ -12,3 +12,8 @@ Corpus sur les séries, partitionnement selon les notes, 3 catégories :
 "nous" est représentatif du corpus positif
 
 ## Taglines (phrases d'accroches)
+
+
+## Recherche REGAX
+
+[frpos="NAM"]+[word=".*"][frpos="ADV" & word=".*ment"][word=".*"]{1,5}
