@@ -9,9 +9,17 @@ Corpus sur les séries, partitionnement selon les notes, 3 catégories :
 
 ## Spécificités
 
+### Remarques générales
+
 "nous" est représentatif du corpus positif.
+
+### Les personnages et acteurs
+
 On parle des personnages si la série est pas mal et des acteurs si la série est bonne.
 On constate avec les expresisons régulières que la recherche de type EN+est+ADJ renvoie des phrases sur les acteurs et personnages et on obtient principalement des adjectifs positifs. C'est une spécificité des critiques positives se référants aux acteurs.
+
+### Musique et Bande son
+
 
 ## Taglines (phrases d'accroches)
 
