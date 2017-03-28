@@ -15,3 +15,7 @@ On parle des personnages si la série est pas mal et des acteurs si la série es
 
 ## Taglines (phrases d'accroches)
 
+
+## Recherche REGAX
+
+[frpos="NAM"]+[word=".*"][frpos="ADV" & word=".*ment"][word=".*"]{1,5}
