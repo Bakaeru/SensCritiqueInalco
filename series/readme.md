@@ -1,6 +1,6 @@
 # Recherches sur les séries
 
-Groupe : Erna, ohaila, Nidia, Justine, Mathilde
+Groupe : Erna, Sohaila, Nidia, Justine, Mathilde
 
 ## Introduction
 
