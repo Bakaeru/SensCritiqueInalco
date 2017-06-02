@@ -1,12 +1,10 @@
 # SensCritiqueInalco
 
-
-
-## Scripts :
+## Scripts :
 
 
 
-### Scripts Python
+### Scripts Python
 
 - main.py : nettoyage du corpus, création du tabulaire pour le corpus d'entrainement
 - etiquetage.py :
