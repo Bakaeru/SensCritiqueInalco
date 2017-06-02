@@ -1,0 +1,34 @@
+# critique	nous	mais	alors_que	nb_mots	nb_ponctuation	nb_point_interrogation	nb_virgule	note
+
+# critique
+U00:%x[0,0]
+
+# indication présence nous
+U401:%x[0,1]
+
+# indication présence je
+U402:%x[0,2]
+
+# indication présence mais
+U403:%x[0,3]
+
+# indication alors_que
+U404:%x[0,4]
+
+# nombre de mots
+U405:%x[0,5]
+
+# nombre de marque de ponctuation
+U406:%x[0,6]
+
+# nombre de points d'exclamation
+U407:%x[0,7]
+
+# nombre de virgules
+U408:%x[0,8]
+
+# presence musiqe
+U409:%x[0,9]
+
+# Bigram of output
+*
