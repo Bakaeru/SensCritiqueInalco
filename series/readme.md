@@ -2,6 +2,8 @@
 
 Groupe : Erna, Sohaila, Nidia, Justine, Mathilde
 
+Nous avons stocké ici nos observations au fur et à mesure de l'avancement de nos recherches, le rapport complet incluant des explications détaillées sur les résultats de notre analyse exploratoire et sur l'entraînement d'un algorithme de classification automatique est disponible : "Rapport SensCritique.pdf".
+
 ## Introduction
 
 ## Objectifs
@@ -69,18 +71,16 @@ On parle des "personnages" si la série est neutre (note entre 4 et 7) et des "a
 
 ![Le terme acteur est représentatif des critiques plutôt positives](./capture_ecran/Graphique_frlemma_personnage.svg)
 
-On constate avec les expresisons régulières que la recherche de type EN+est+ADJ renvoie des phrases sur les acteurs et personnages et on obtient principalement des adjectifs positifs. C'est une spécificité des critiques positives se référants aux acteurs.
+​	On constate avec les expressions régulières que la recherche de type EN+est+ADJ renvoie des phrases sur les acteurs et personnages et on obtient principalement des adjectifs positifs. C'est une spécificité des critiques positives se référants aux acteurs.
 
 cooccurrences de ‘principal’ : personnage, acteur, jeu, grand, bonne, super, rôle, intérêt, charisme.
 
-La liste des coocurrents de "principal" confirment que "principal" se rapporte presque exclusivement au "personnage" ou à l'"acteur" principal et les premiers coocurrents sont des mots positifs, on peut affirmer que parler des "acteurs" et des "personnages" est synonyme d'une critique positive, notamment quand on parle des "acteurs".
+​	La liste des coocurrents de "principal" confirment que "principal" se rapporte presque exclusivement au "personnage" ou à l'"acteur" principal et les premiers coocurrents sont des mots positifs, on peut affirmer que parler des "acteurs" et des "personnages" est synonyme d'une critique positive, notamment quand on parle des "acteurs".
 
 
 ### Musique et Bande son
 
 ![Musique et bande-son](./capture_ecran/Musiq.jpg)
-
-## Taglines (phrases d'accroches)
 
 
 
@@ -91,3 +91,5 @@ La liste des coocurrents de "principal" confirment que "principal" se rapporte p
 3) [word="[A-Z][a-z]+"]+[word="est"][word=".*"]?[frpos="ADJ"]
 
 ## Conclucion
+
+Le détail de nos recherches et nos conclusiosn suite à ce travail sont disponibles dans le fichier "Rapport SensCritique.pdf".
